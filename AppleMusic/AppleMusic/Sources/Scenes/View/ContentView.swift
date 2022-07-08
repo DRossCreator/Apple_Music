@@ -26,7 +26,7 @@ struct ContentView: View {
                         Text("Radio")
                     }
 
-                Text("")
+                Search()
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Search")

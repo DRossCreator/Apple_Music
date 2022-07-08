@@ -20,7 +20,7 @@ struct RadioView: View {
                     default: VStack {
                         Rectangle()
                             .fill(Color(UIColor.systemGray6.cgColor))
-                            .frame(height: 2, alignment: .center)
+                            .frame(height: 0)
                             .padding(.top, 10)
                         SecondSectionStation(model: item)
                     }
@@ -65,7 +65,7 @@ struct FirstSectionCollection: View {
         return VStack {
             Rectangle()
                 .fill(Color(UIColor.systemGray6.cgColor))
-                .frame(height: 2, alignment: .center)
+                .frame(height: 0)
                 .padding(.bottom, 10)
 
             Text(data.additionalInfo)
@@ -84,7 +84,11 @@ struct FirstSectionCollection: View {
 
             Image(data.icon)
                 .resizable()
-                .frame(width: 380, height: 220)
+
+                //leading padding = 20
+                //trailing padding = 20
+                //total = 40
+                .frame(width: UIScreen.main.bounds.width - 40, height: 220)
                 .cornerRadius(10)
         }
     }
@@ -104,7 +108,6 @@ struct SecondSectionStation: View {
                     .bold()
                     .font(.title2)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 10)
             }
         ) {
             LazyVGrid(columns: columns) {
@@ -148,5 +151,6 @@ struct SecondSectionStation: View {
 struct RadioView_Previews: PreviewProvider {
     static var previews: some View {
         RadioView()
+            .previewDevice("iPhone 11")
     }
 }
