@@ -104,7 +104,6 @@ struct SecondSectionStation: View {
                     .bold()
                     .font(.title2)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 10)
             }
         ) {
             LazyVGrid(columns: columns) {
