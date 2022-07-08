@@ -20,7 +20,7 @@ struct ContentView: View {
                         Text("Media library")
                     }
 
-                Text("")
+                RadioView()
                     .tabItem {
                         Image(systemName: "dot.radiowaves.left.and.right")
                         Text("Radio")
