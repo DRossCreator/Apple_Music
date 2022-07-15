@@ -19,4 +19,3 @@ struct RadioModel: Hashable {
     var nameStation: String?
     var additionalInfo: String
 }
-

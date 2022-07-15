@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State var expand = false
+    @Namespace var animation
+
     var body: some View {
 
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
@@ -26,7 +30,7 @@ struct ContentView: View {
                         Text("Radio")
                     }
 
-                Search()
+                SearchUIKit()
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
@@ -34,8 +38,7 @@ struct ContentView: View {
             }
             .accentColor(.red)
 
-            MiniPlayerView()
-                .offset(y: -49)
+            MiniPlayerView(animation: animation, expand: $expand)
         })
     }
 }

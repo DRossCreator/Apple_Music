@@ -88,6 +88,7 @@ struct FirstSectionCollection: View {
                 //leading padding = 20
                 //trailing padding = 20
                 //total = 40
+                //minimum supported device for a given iPhone 6 width
                 .frame(width: UIScreen.main.bounds.width - 40, height: 220)
                 .cornerRadius(10)
         }
@@ -151,6 +152,6 @@ struct SecondSectionStation: View {
 struct RadioView_Previews: PreviewProvider {
     static var previews: some View {
         RadioView()
-            .previewDevice("iPhone 11")
+            .previewDevice("iPhone 8")
     }
 }
